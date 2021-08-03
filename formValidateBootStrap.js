@@ -69,9 +69,7 @@ $("#form").submit(function (e) {
   data.append("to", "amitkiit1994@gmail.com");
   data.append("subject", "Amit's Space Notification");
   data.append("text", $("#message").val());
-  var hash = btoa(
-    "Basic YXBpOjBhMGU3MzI3ZTQyOWY0NzQ3MDZkNTg3ZGVmMzhhZmM2LTY0NTc0YTY4LWJmMGY0MGFj"
-  );
+  var hash = btoa("Basic ###");
 
   $.ajax({
     method: "POST",
