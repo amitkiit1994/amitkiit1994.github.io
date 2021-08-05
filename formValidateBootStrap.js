@@ -63,29 +63,4 @@ $("#form").submit(function (e) {
   );
   $("#modal").modal("show");
   e.preventDefault();
-
-  var data = new FormData();
-  data.append("from", $("#email").val());
-  data.append("to", "amitkiit1994@gmail.com");
-  data.append("subject", "Amit's Space Notification");
-  data.append("text", $("#message").val());
-  var hash = btoa("Basic ###");
-
-  $.ajax({
-    method: "POST",
-    url: "https://api.mailgun.net/v3/sandboxa2f2a084186f4045b378240a5258e9a9.mailgun.org/messages",
-    data: data,
-    cache: false,
-    contentType: false,
-    processData: false,
-    headers: {
-      Authorization: atob(hash),
-    },
-    method: "POST",
-    type: "POST",
-    enctype: "multipart/form-data",
-    success: function (data) {
-      console.log("success");
-    },
-  });
 });
