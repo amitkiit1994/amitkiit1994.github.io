@@ -78,15 +78,15 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
-                    </li>
+                    
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">HOME</a>
+                        <a class="nav-link" href="index.php">HOME</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="myPortfolio.html">MY PORTFOLIO</a>
+                        <a class="nav-link" href="myPortfolio.php">MY PORTFOLIO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="letsConnect.html">LET'S CONNECT</a>
+                        <a class="nav-link" href="letsConnect.php">LET'S CONNECT</a>
                     </li>
                 </ul>
             </div>
@@ -98,7 +98,7 @@
             <div class="col-lg-6 shadow-lg rounded" id="introcontainer">
                 <h1 class="display-4">Amit Kumar Das</h1>
                 <p>Technology Consultant @ Microsoft</p>
-                <a href="letsConnect.html" class="btn btn-dark btn-lg p-3 shadow-lg rounded" role="button">LET'S
+                <a href="letsConnect.php" class="btn btn-dark btn-lg p-3 shadow-lg rounded" role="button">LET'S
                     CONNECT</a>
             </div>
             <div class="col-lg-6 p-4" id="imagecontainer">

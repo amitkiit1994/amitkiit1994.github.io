@@ -38,8 +38,6 @@
 
         #introtron {
             background-color: #ffffff;
-            padding-top: 20%;
-            padding-bottom: 20%;
             font-size: 20px;
         }
 
@@ -78,82 +76,55 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="myPortfolio.html">MY PORTFOLIO</a>
-                    </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="letsConnect.html">LET'S CONNECT</a>
+                        <a class="nav-link" href="index.php">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="myPortfolio.php">MY PORTFOLIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="letsConnect.php">LET'S CONNECT</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </div>
 
+
+
     <div class="container border shadow-lg rounded">
         <div class="row">
             <div class="col-lg-6" id="introcontainer">
                 <h1 class="display-4">Amit Kumar Das</h1>
                 <p>Technology Consultant @ Microsoft</p>
-                <p class="lead">Questions or Comments?</p>
-                <p>Ping me or ask me a question using the form.</p>
+                <a href="letsConnect.php" class="btn btn-dark btn-lg p-3 shadow-lg rounded" role="button">LET'S
+                    CONNECT</a>
             </div>
-            <div class="col-lg-6 p-0 shadow-lg bg-white rounded text-left p-4" id="imagecontainer">
-                <div class="row p-3">
-                    <h1 class="display-4">Get in Touch with Me!</h1>
-                </div>
-                <div class="row-lg-6 justify-content-center">
-                    <form action="mail_handler.php" role="form" method="post" id="form" name="form"
-                        class="needs-validation" novalidate>
-                        <div id="messages" class="d-none" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-                                    aria-hidden="true">&times;</span></button>
-                            <div id="messages_content"></div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-lg-12">
-                                <input type="text" class="form-control form-control-sm" id="uname"
-                                    pattern="^([a-zA-Z]+\s)*[a-zA-Z]+$" placeholder="Tell me your Name!" name="uname"
-                                    required>
-                                <div class="valid-feedback">Roger That!</div>
-                                <div class="invalid-feedback">Let's try again with a valid name</div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-lg-12">
-                                <input type="email" class="form-control form-control-sm" id="email"
-                                    pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
-                                    placeholder="Specify Your Email, Lets connect for lifetime!" name="email" required>
-                                <div class="valid-feedback">Roger That!</div>
-                                <div class="invalid-feedback">I really want to reply you back but this is an invalid
-                                    email</div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-lg-12">
-                                <textarea class="form-control form-control-sm" id="message" required rows="3"
-                                    maxlength="1000" placeholder="What's that you want to tell me!"
-                                    name="message"></textarea>
-                                <small id="passwordHelpBlock" class="form-text text-muted">
-                                </small>
-                            </div>
-                        </div>
-                        <div class="form-group text-center">
-                            <button class="btn btn-lg p-3 btn-warning font-weight-bold border-dark shadow-lg rounded"
-                                id="submit" type="submit" name="submit">SHOOT !!</a>
-                        </div>
-                    </form>
-                </div>
-                <div class="row-lg-6 justify-content-center">
-                    <p class="lead">My Place: Kolkata, West Bengal</p>
-                </div>
+            <div class="col-lg-6 p-0" id="imagecontainer">
+                <img src="dp.png" />
             </div>
         </div>
     </div>
 
+    <div class="container text-left text-dark border shadow-lg bg-white rounded" id="get_to_know_ctn">
+        <!--<div class="row">
+            <div class="col-lg-6 p-0" id="imagecontainersecond">
+                <img src="dp2.png" />
+            </div>
+            <div class="col-lg-6">-->
+        <div class="jumbotron" id="introtron">
+            <h1 class="display-1">Hello there!</h1>
+            <p class="lead">Welcome to My Space</p>
+            <p class="small">"Dreams aren't the ones that come in your sleep instead they are the ones that do
+                not let you sleep" - Dr. A.P.J Abdul kalam</p>
+            <p class="font-weight-bolder">Lets Grow Together!</p>
+            <a class="btn btn-lg p-3 btn-warning font-weight-bold border-dark shadow-lg rounded" id="get_to_know_btn"
+                href="myPortfolio.php" role="button">GET TO
+                KNOW ME!</a>
+        </div>
+    </div>
+    <!--</div>
+    </div>-->
 
     <div class="container shadow-lg rounded p-3 fixed-bottom" id="social_links_ctn">
         <a rel="noopener" role="link" aria-haspopup="true" data-ux="Link" target="_blank"
@@ -227,8 +198,6 @@
 
 
 </body>
-<script src="formValidateBootStrap.js">
-</script>
 <script src="whatsapp.js">
 </script>
 <!-- Footer -->
