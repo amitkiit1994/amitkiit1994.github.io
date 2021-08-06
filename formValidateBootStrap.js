@@ -38,29 +38,20 @@ $(function () {
       event.preventDefault();
       event.stopPropagation();
       return false;
+    } else {
+      event.preventDefault();
+      $("#messages")
+        .removeClass("d-none")
+        .addClass("alert alert-success alert-dismissible fade show")
+        .fadeIn()
+        .show();
+      $("#messages_content").html(
+        "Thanks for writing in <strong>" +
+          $("#uname").val() +
+          "!</strong> I will do my best to get back to you as soon as I can!"
+      );
+      $("#modal").modal("show");
     }
     // call ajax here or let it bubble to the submit button
   });
-});
-
-var name = document.forms["form"]["uname"];
-$("#inlineRadio2").click(function () {
-  $("#myfields").slideDown();
-});
-$("#inlineRadio1").click(function () {
-  $("#myfields").slideUp();
-});
-$("#form").submit(function (e) {
-  $("#messages")
-    .removeClass("d-none")
-    .addClass("alert alert-success alert-dismissible fade show")
-    .fadeIn()
-    .show();
-  $("#messages_content").html(
-    "Thanks for writing in <strong>" +
-      $("#uname").val() +
-      "!</strong> I will do my best to get back to you as soon as I can!"
-  );
-  $("#modal").modal("show");
-  e.preventDefault();
 });
