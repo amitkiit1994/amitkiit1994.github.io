@@ -18,7 +18,7 @@ var options = {
   brandSetting: {
     brandName: "Amit Kumar Das",
     brandSubTitle: "I would reply typically within a day!",
-    brandImg: "dp.png",
+    brandImg: "images/dp.png",
     welcomeText: "Hello!\nWhat is it that you want to tell me?",
     messageText: "Hello, I have a question about {{page_link}}",
     backgroundColor: "#0a5f54",
