@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/domains/amitkumar-das.com/public_html/
+    - /bin/cp -R * $DEPLOYPATH
