@@ -74,6 +74,7 @@ function showHomeContainer() {
   portfolioNavElement.classList.remove("active");
   connectNavElement.classList.remove("active");
   feedNavElement.classList.remove("active");
+  window.scrollTo(0, 0);
 }
 
 function showPortFolioContainer() {
@@ -85,6 +86,7 @@ function showPortFolioContainer() {
   portfolioNavElement.classList.add("active");
   connectNavElement.classList.remove("active");
   feedNavElement.classList.remove("active");
+  window.scrollTo(0, 0);
 }
 
 function showConnectContainer() {
@@ -96,6 +98,7 @@ function showConnectContainer() {
   connectNavElement.classList.add("active");
   feedNavElement.classList.remove("active");
   feedContainer.style.display = "none";
+  window.scrollTo(0, 0);
 }
 
 function showFeedContainer() {
@@ -107,8 +110,11 @@ function showFeedContainer() {
   connectNavElement.classList.remove("active");
   feedNavElement.classList.add("active");
   feedContainer.style.display = "";
+  window.scrollTo(0, 0);
 }
 
 $(".navbar-collapse a").click(function () {
   $(".navbar-collapse").collapse("hide");
 });
+
+window.onload = showHomeContainer();
