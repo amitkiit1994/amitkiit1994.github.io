@@ -55,3 +55,60 @@ $(function () {
     // call ajax here or let it bubble to the submit button
   });
 });
+
+var portfolioContainer = document.getElementById("portfolioDiv");
+var letsConnectContainer = document.getElementById("letsConnectDiv");
+var homeContainer = document.getElementById("homeDiv");
+var feedContainer = document.getElementById("feedDiv");
+var homeNavElement = document.getElementById("home_nav");
+var portfolioNavElement = document.getElementById("portfolio_nav");
+var connectNavElement = document.getElementById("connect_nav");
+var feedNavElement = document.getElementById("feed_nav");
+
+function showHomeContainer() {
+  portfolioContainer.style.display = "none";
+  letsConnectContainer.style.display = "none";
+  homeContainer.style.display = "";
+  feedContainer.style.display = "none";
+  homeNavElement.classList.add("active");
+  portfolioNavElement.classList.remove("active");
+  connectNavElement.classList.remove("active");
+  feedNavElement.classList.remove("active");
+}
+
+function showPortFolioContainer() {
+  portfolioContainer.style.display = "";
+  letsConnectContainer.style.display = "none";
+  homeContainer.style.display = "none";
+  feedContainer.style.display = "none";
+  homeNavElement.classList.remove("active");
+  portfolioNavElement.classList.add("active");
+  connectNavElement.classList.remove("active");
+  feedNavElement.classList.remove("active");
+}
+
+function showConnectContainer() {
+  portfolioContainer.style.display = "none";
+  letsConnectContainer.style.display = "";
+  homeContainer.style.display = "none";
+  homeNavElement.classList.remove("active");
+  portfolioNavElement.classList.remove("active");
+  connectNavElement.classList.add("active");
+  feedNavElement.classList.remove("active");
+  feedContainer.style.display = "none";
+}
+
+function showFeedContainer() {
+  portfolioContainer.style.display = "none";
+  letsConnectContainer.style.display = "none";
+  homeContainer.style.display = "none";
+  homeNavElement.classList.remove("active");
+  portfolioNavElement.classList.remove("active");
+  connectNavElement.classList.remove("active");
+  feedNavElement.classList.add("active");
+  feedContainer.style.display = "";
+}
+
+$(".navbar-collapse a").click(function () {
+  $(".navbar-collapse").collapse("hide");
+});

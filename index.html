@@ -12,6 +12,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
 </head>
 
 <body>
@@ -27,14 +29,19 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#index">HOME</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#index" onclick="showHomeContainer()" id="home_nav">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">MY PORTFOLIO</a>
+                        <a class="nav-link" href="#portfolio" onclick="showPortFolioContainer()" id="portfolio_nav">MY
+                            PORTFOLIO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#letsConnect">LET'S CONNECT</a>
+                        <a class="nav-link" href="#letsConnect" onclick="showConnectContainer()" id="connect_nav">LET'S
+                            CONNECT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#feedDiv" onclick="showFeedContainer()" id="feed_nav">posts</a>
                     </li>
                 </ul>
             </div>
@@ -42,277 +49,403 @@
     </div>
 
 
-
-    <div class="container border shadow-lg rounded" id="index">
-        <div class="row">
-            <div class="col-lg-6" id="introcontainer">
-                <h1 class="display-4">Amit Kumar Das</h1>
-                <p>Technology Consultant @ Microsoft</p>
-                <a href="#letsConnect" class="btn btn-dark btn-lg p-3 shadow-lg rounded" role="button">LET'S
-                    CONNECT</a>
+    <div id="homeDiv">
+        <div class="container border shadow-lg rounded" id="index">
+            <div class="row">
+                <div class="col-lg-6" id="introcontainer">
+                    <h1 class="display-4">Amit Kumar Das</h1>
+                    <p>Technology Consultant @ Microsoft</p>
+                    <a href="#letsConnect" onclick="showConnectContainer()"
+                        class="btn btn-dark btn-lg p-3 shadow-lg rounded" role="button">LET'S
+                        CONNECT</a>
+                </div>
+                <div class="col-lg-6 p-0 m-0" id="imagecontainer">
+                    <img id="dp" src="images/dp.png" />
+                </div>
             </div>
-            <div class="col-lg-6 p-0 m-0" id="imagecontainer">
-                <img id="dp" src="images/dp.png" />
+        </div>
+
+        <div class="container text-left text-dark border shadow-lg bg-white rounded" id="get_to_know_ctn">
+            <div class="jumbotron" id="introtron">
+                <h1 class="display-1">Hello there!</h1>
+                <p class="lead">Welcome to My Space</p>
+                <p class="small">"If you believe in yourself that you can achieve, then you have achieved it already,
+                    that's half battle won!"</p>
+                <p class="font-weight-bolder">Lets Grow Together!</p>
+                <a class="btn btn-lg p-3 btn-warning font-weight-bold border-dark shadow-lg rounded"
+                    id="get_to_know_btn" href="#portfolio" role="button" onclick="showPortFolioContainer()">GET TO
+                    KNOW ME!</a>
             </div>
         </div>
     </div>
 
-    <div class="container text-left text-dark border shadow-lg bg-white rounded" id="get_to_know_ctn">
-        <div class="jumbotron" id="introtron">
-            <h1 class="display-1">Hello there!</h1>
-            <p class="lead">Welcome to My Space</p>
-            <p class="small">"Dreams aren't the ones that come in your sleep instead they are the ones that do
-                not let you sleep" - Dr. A.P.J Abdul kalam</p>
-            <p class="font-weight-bolder">Lets Grow Together!</p>
-            <a class="btn btn-lg p-3 btn-warning font-weight-bold border-dark shadow-lg rounded" id="get_to_know_btn"
-                href="#portfolio" role="button">GET TO
-                KNOW ME!</a>
-        </div>
-    </div>
-
-    <div class="container border" id="portfolio"></div>
-    <div class="container shadow-lg rounded mt-5" id="portfolio">
-        <div class="row">
-            <div class="col-lg-6 shadow-lg rounded" id="introcontainer">
-                <h1 class="display-4">Amit Kumar Das</h1>
-                <p>Technology Consultant @ Microsoft</p>
-                <a href="#letsConnect" class="btn btn-dark btn-lg p-3 shadow-lg rounded" role="button">LET'S
-                    CONNECT</a>
-            </div>
-            <div class="col-lg-6 p-4" id="imagecontainer">
-                <h1 class="display-4 text-center">Let me introduce myself to you!</h1>
-                <p>Firstly! Warm welcome to my place!</p>
-                <p> I am an Engineering postgraduate, currently in Software Industry. My primary focus is bringing the
-                    best quality version of Software through means of Functional, Performance, and Automation Tests with
-                    a DevOps and Agile Mindset. I love my job to the core, finding bugs is one of my passion apart from
-                    coding. I try to keep myself updated with technology by keeping myself involved in tech communities,
-                    ed tech channels, etc. I am obsessed with learning the latest technologies. In my past time, I like
-                    to solve hackerank, work on my projects, gaming, guitaring,...</p>
-                <p>Currently, I am exploring Microsoft...</p>
-                <p>I specialize in Creating Test Bots, Containerization, Orchestration, Framework development, Test
-                    Architecting, Service virtualization, Cloud computing, etc.
-                </p>
-                <p>All over, I am an experienced Software Development Engineer in Test (SDET) professional with a
-                    demonstrated history of Testing Web and Android applications.
-                </p>
-                <p class="lead shadow-lg rounded p-2">"If I have to do a task more than twice I automate and If I have
-                    to
-                    explain a task
-                    more than
-                    twice I document"</p>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="container text-dark border shadow-lg bg-white rounded" id="get_to_know_ctn">
-        <div class="row">
-            <div class="col-lg-6 p-4" id="highlightscontainer">
-                <h1 class="display-4 text-center">Some Highlights!</h1>
-                <ul class="list-group list-group-flush text-left p-1">
-                    <li class="list-group-item">+ Experience in DevOps CI+CD and Agile Culture.</li>
-                    <li class="list-group-item">+ Strong Experience in Java and Test Automation using Selenium WebDriver
-                        and REST API automation.</li>
-                    <li class="list-group-item">+ Strong knowledge in containerization with Docker and orchestration
-                        using
-                        Kubernetes.</li>
-                    <li class="list-group-item">+ Strong Knowledge of Software Development Life Cycle (SDLC), Software
-                        Testing life cycle (STLC), Agile Life Cycle with Jira, Testing Terminologies, Verification,
-                        Validation, Levels of Testing, Testing Techniques, and Bug life cycle. </li>
-                    <li class="list-group-item">+ Strong knowledge in building Test automation frameworks for functional
-                        as well as non-functional testing.</li>
-                    <li class="list-group-item">+ Experience in creating APIs with spring-boot to handle end-to-end
-                        automation scenarios.</li>
-                    <li class="list-group-item">+ Strong knowledge of Microservices, Containerization, and Cloud
-                        computing.</li>
-                </ul>
-            </div>
-            <div class="col-lg-6 p-4 shadow-lg bg-white rounded">
-                <h1 class="display-4 text-center">My Tech Stack!</h1>
-                <div class="row text-center">
-                    <p>Java | Selenium | Rest API Automation | Postman | Kubernetes | Docker | Maven | Testng | Log4j |
-                        Rest
-                        assured io | Cucumber | Karate | Oracle | MySQL | PostgreSQL | Unix | Shell scripting | Gatling
-                        |
-                        Git | HTML | CSS | Javascript | Jenkins | Jira | Azure Devops | Springboot | Specmatic (Mock
-                        Api) |
-                        Python | Apache Airflow | Influx | Grafana
+    <div id="portfolioDiv">
+        <div class="container shadow-lg rounded mt-5" id="portfolioContainer">
+            <div class="row">
+                <div class="col-lg-6 shadow-lg rounded" id="introcontainer">
+                    <h1 class="display-4">Amit Kumar Das</h1>
+                    <p>Technology Consultant @ Microsoft</p>
+                    <a href="#letsConnect" class="btn btn-dark btn-lg p-3 shadow-lg rounded" role="button"
+                        onclick="showConnectContainer()">LET'S
+                        CONNECT</a>
+                </div>
+                <div class="col-lg-6 p-4" id="imagecontainer">
+                    <h1 class="display-4 text-center">Let me introduce myself to you!</h1>
+                    <p>Firstly! Warm welcome to my place!</p>
+                    <p> I am an Engineering postgraduate, currently in Software Industry. My primary focus is bringing
+                        the
+                        best quality version of Software through means of Functional, Performance, and Automation Tests
+                        with
+                        a DevOps and Agile Mindset. I love my job to the core, finding bugs is one of my passion apart
+                        from
+                        coding. I try to keep myself updated with technology by keeping myself involved in tech
+                        communities,
+                        ed tech channels, etc. I am obsessed with learning the latest technologies. In my past time, I
+                        like
+                        to solve hackerank, work on my projects, gaming, guitaring,...</p>
+                    <p>Currently, I am exploring Microsoft...</p>
+                    <p>I specialize in Creating Test Bots, Containerization, Orchestration, Framework development, Test
+                        Architecting, Service virtualization, Cloud computing, etc.
                     </p>
+                    <p>All over, I am an experienced Software Development Engineer in Test (SDET) professional with a
+                        demonstrated history of Testing Web and Android applications.
+                    </p>
+                    <p class="lead shadow-lg rounded p-2">"If I have to do a task more than twice I automate and If I
+                        have
+                        to
+                        explain a task
+                        more than
+                        twice I document"</p>
+
                 </div>
-                <div class="row">
-                    <img src="images/techstack.png" />
+            </div>
+        </div>
+
+        <div class="container text-dark border shadow-lg bg-white rounded" id="get_to_know_ctn">
+            <div class="row">
+                <div class="col-lg-6 p-4" id="highlightscontainer">
+                    <h1 class="display-4 text-center">Some Highlights!</h1>
+                    <ul class="list-group list-group-flush text-left p-1">
+                        <li class="list-group-item">+ Experience in DevOps CI+CD and Agile Culture.</li>
+                        <li class="list-group-item">+ Strong Experience in Java and Test Automation using Selenium
+                            WebDriver
+                            and REST API automation.</li>
+                        <li class="list-group-item">+ Strong knowledge in containerization with Docker and orchestration
+                            using
+                            Kubernetes.</li>
+                        <li class="list-group-item">+ Strong Knowledge of Software Development Life Cycle (SDLC),
+                            Software
+                            Testing life cycle (STLC), Agile Life Cycle with Jira, Testing Terminologies, Verification,
+                            Validation, Levels of Testing, Testing Techniques, and Bug life cycle. </li>
+                        <li class="list-group-item">+ Strong knowledge in building Test automation frameworks for
+                            functional
+                            as well as non-functional testing.</li>
+                        <li class="list-group-item">+ Experience in creating APIs with spring-boot to handle end-to-end
+                            automation scenarios.</li>
+                        <li class="list-group-item">+ Strong knowledge of Microservices, Containerization, and Cloud
+                            computing.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 p-4 shadow-lg bg-white rounded">
+                    <h1 class="display-4 text-center">My Tech Stack!</h1>
+                    <div class="row text-center">
+                        <p>Java | Selenium | Rest API Automation | Postman | Kubernetes | Docker | Maven | Testng |
+                            Log4j |
+                            Rest
+                            assured io | Cucumber | Karate | Oracle | MySQL | PostgreSQL | Unix | Shell scripting |
+                            Gatling
+                            |
+                            Git | HTML | CSS | Javascript | Jenkins | Jira | Azure Devops | Springboot | Specmatic (Mock
+                            Api) |
+                            Python | Apache Airflow | Influx | Grafana
+                        </p>
+                    </div>
+                    <div class="row">
+                        <img src="images/techstack.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-dark border shadow-lg bg-white rounded" id="journey_ctn">
+            <div class="row justify-content-center p-4">
+                <h2 class="display-1">My Journey!</h2>
+            </div>
+            <div class="row justify-content-center p-0">
+                <div class="col-lg-6 p-0 shadow-lg bg-white rounded">
+                    <img src="images/microsoftlogo.webp" />
+                </div>
+                <div class="col-lg-6 p-4 shadow-lg bg-white rounded">
+                    <h1 class="display-4 text-center">Technology Consultant</h1>
+                    <h1 class="lead text-center">Jun 2021 - Present</h1>
+                    <ul class="list-group list-group-flush text-left p-1">
+                        <li class="list-group-item">+ Part of NBA project; to create direct-to-consumer platform that
+                            will
+                            deliver new fan engagement experiences and enhanced streaming capabilities powered by
+                            Microsoft
+                            Azure and its AI capabilities.</li>
+                        <li class="list-group-item">+Ensuring quality assurance of all the integrations with azure
+                            paas's
+                            (cosmos, event hubs, ADX, service bus).</li>
+                        <li class="list-group-item">+ End to End Automation, integrations with Azure platforms,
+                            Framework
+                            Development with Specflow BDD.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 p-0 shadow-lg bg-white rounded">
+                    <img src="images/jiologo.png" />
+                </div>
+                <div class="col-lg-6 p-4 shadow-lg bg-white rounded">
+                    <h1 class="display-4 text-center">Deputy Manager</h1>
+                    <h1 class="lead text-center">Feb 2021 - Jun 2021</h1>
+                    <ul class="list-group list-group-flush text-left p-1">
+                        <li class="list-group-item">+ Part of Initial Quality Assurance Team of JioMart ecommerce
+                            application.</li>
+                        <li class="list-group-item">+ Responsible for developing Bots(wrapper apis) with Spring boot and
+                            http client that automated apis involving end to end B2C orders to serve the model of
+                            Software
+                            Testing as a Service (STAAS). Integrated the framework with mysql for storing test data,
+                            influx
+                            for storing custom metrics and Grafana to visualise the metrics of incoming orders.</li>
+                        <li class="list-group-item">+ Responsible for building Automation framework with Gatling and
+                            Maven
+                            to simulate load on high traffic endpoints to simulate Load Testing. Dockerised the project
+                            to
+                            seamlessly deploy and test across all servers.</li>
+                        <li class="list-group-item">+ Created and setup service virtualization (Mock apis) with
+                            specmatic
+                            tool to mock external api responses.</li>
+                        <li class="list-group-item">+ Responsible for containerizing all the test automation projects
+                            with
+                            Docker to deploy them seamlessly across any environment. </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 p-4 shadow-lg bg-white rounded">
+                    <img src="images/saslogo.png" />
+                </div>
+                <div class="col-lg-6 p-4 shadow-lg bg-white rounded">
+                    <h1 class="display-4 text-center">Senior Software Engineer</h1>
+                    <h1 class="lead text-center">May 2019 - Feb 2021</h1>
+                    <ul class="list-group list-group-flush text-left p-1">
+                        <li class="list-group-item">+ Responsible for testing stories involving Statistical
+                            Calculations,
+                            Data seeding, Grid and Visual Analytics interface from functional perspective. Also, data
+                            validations through database testing and Backend validation for API requests and responses.
+                        </li>
+                        <li class="list-group-item">+ Scrutinizing logs for every microservice and pods related to
+                            process
+                            triggered in a container orchestrated system.</li>
+                        <li class="list-group-item">+ Ensuring maintenance and rpm updates of microservices for steady
+                            build
+                            to maintain CICD approach through Jenkins or Linux terminal.</li>
+                        <li class="list-group-item">+ Responsible for Creating, Administering Kubernetes cluster and
+                            troubleshooting for pods, deployments, services, persistent volumes, rolling updates, nodes,
+                            etc.</li>
+                        <li class="list-group-item">+ Responsible for writing automation codes for API (groovy) as well
+                            as
+                            UI (selenium) for the features and stories in sprint to ensure CI-CD devops model approach.
+                        </li>
+                        <li class="list-group-item">+ Maintaining clean BVT and sanity API automation reports by
+                            regularly
+                            updating code against test case failures to ensure agile approach.</li>
+                        <li class="list-group-item">+ Single handedly responsible for classic product version release
+                            ensuring customer reported defect fixes and thorough regression testing in order to assure
+                            quality.</li>
+                        <li class="list-group-item">+ Managing UI automation team by Project planning through JIRA,
+                            creating
+                            stories and test cases related to sanity. Also involved in code validation from functional
+                            point
+                            of view.</li>
+                        <li class="list-group-item">+ Involved in regular interactions with product management and
+                            stakeholders.</li>
+                        <li class="list-group-item">+ Responsible for performance testing and preparing comparison
+                            insight
+                            reports.</li>
+                        <li class="list-group-item">+ Involved in preparing Test case Documentation and reports.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 p-4 shadow-lg bg-white rounded">
+                    <img src="images/infosyslogo.png" />
+                </div>
+                <div class="col-lg-6 p-4 shadow-lg bg-white rounded">
+                    <h1 class="display-4 text-center">Systems Engineer</h1>
+                    <h1 class="lead text-center">Jan 2017 - May 2019</h1>
+                    <ul class="list-group list-group-flush text-left p-1">
+                        <li class="list-group-item">+ Reviewed Business Requirements and accordingly Prepared Test Plans
+                            and
+                            Scripts.</li>
+                        <li class="list-group-item">+ Identified and reported defects through Smoke Testing, Continuous
+                            Regression testing and Performance testing.</li>
+                        <li class="list-group-item">+ Identified and reported defects through Smoke Testing, Continuous
+                            Regression testing and Performance testing.</li>
+                        <li class="list-group-item">+ Developed Data Driven Automation framework using Page Object
+                            Design
+                            pattern.</li>
+                        <li class="list-group-item">+ Identified Automation Scenarios from the set of Test cases and
+                            developed Web automation scripts using Selenium WebDriver and TestNG.</li>
+                        <li class="list-group-item">+ Developed a robust framework by integrating TestNG with Maven and
+                            implemented Listeners interface, Page Object pattern, Log4j and Excel Data Driven testing.
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container text-dark border shadow-lg bg-white rounded" id="journey_ctn">
-        <div class="row justify-content-center p-4">
-            <h2 class="display-1">My Journey!</h2>
-        </div>
-        <div class="row justify-content-center p-0">
-            <div class="col-lg-6 p-0 shadow-lg bg-white rounded">
-                <img src="images/microsoftlogo.webp" />
-            </div>
-            <div class="col-lg-6 p-4 shadow-lg bg-white rounded">
-                <h1 class="display-4 text-center">Technology Consultant</h1>
-                <h1 class="lead text-center">Jun 2021 - Present</h1>
-                <ul class="list-group list-group-flush text-left p-1">
-                    <li class="list-group-item">+ Part of NBA project; to create direct-to-consumer platform that will
-                        deliver new fan engagement experiences and enhanced streaming capabilities powered by Microsoft
-                        Azure and its AI capabilities.</li>
-                    <li class="list-group-item">+Ensuring quality assurance of all the integrations with azure paas's
-                        (cosmos, event hubs, ADX, service bus).</li>
-                    <li class="list-group-item">+ End to End Automation, integrations with Azure platforms, Framework
-                        Development with Specflow BDD.</li>
-                </ul>
-            </div>
-            <div class="col-lg-6 p-0 shadow-lg bg-white rounded">
-                <img src="images/jiologo.png" />
-            </div>
-            <div class="col-lg-6 p-4 shadow-lg bg-white rounded">
-                <h1 class="display-4 text-center">Deputy Manager</h1>
-                <h1 class="lead text-center">Feb 2021 - Jun 2021</h1>
-                <ul class="list-group list-group-flush text-left p-1">
-                    <li class="list-group-item">+ Part of Initial Quality Assurance Team of JioMart ecommerce
-                        application.</li>
-                    <li class="list-group-item">+ Responsible for developing Bots(wrapper apis) with Spring boot and
-                        http client that automated apis involving end to end B2C orders to serve the model of Software
-                        Testing as a Service (STAAS). Integrated the framework with mysql for storing test data, influx
-                        for storing custom metrics and Grafana to visualise the metrics of incoming orders.</li>
-                    <li class="list-group-item">+ Responsible for building Automation framework with Gatling and Maven
-                        to simulate load on high traffic endpoints to simulate Load Testing. Dockerised the project to
-                        seamlessly deploy and test across all servers.</li>
-                    <li class="list-group-item">+ Created and setup service virtualization (Mock apis) with specmatic
-                        tool to mock external api responses.</li>
-                    <li class="list-group-item">+ Responsible for containerizing all the test automation projects with
-                        Docker to deploy them seamlessly across any environment. </li>
-                </ul>
-            </div>
-            <div class="col-lg-6 p-4 shadow-lg bg-white rounded">
-                <img src="images/saslogo.png" />
-            </div>
-            <div class="col-lg-6 p-4 shadow-lg bg-white rounded">
-                <h1 class="display-4 text-center">Senior Software Engineer</h1>
-                <h1 class="lead text-center">May 2019 - Feb 2021</h1>
-                <ul class="list-group list-group-flush text-left p-1">
-                    <li class="list-group-item">+ Responsible for testing stories involving Statistical Calculations,
-                        Data seeding, Grid and Visual Analytics interface from functional perspective. Also, data
-                        validations through database testing and Backend validation for API requests and responses.</li>
-                    <li class="list-group-item">+ Scrutinizing logs for every microservice and pods related to process
-                        triggered in a container orchestrated system.</li>
-                    <li class="list-group-item">+ Ensuring maintenance and rpm updates of microservices for steady build
-                        to maintain CICD approach through Jenkins or Linux terminal.</li>
-                    <li class="list-group-item">+ Responsible for Creating, Administering Kubernetes cluster and
-                        troubleshooting for pods, deployments, services, persistent volumes, rolling updates, nodes,
-                        etc.</li>
-                    <li class="list-group-item">+ Responsible for writing automation codes for API (groovy) as well as
-                        UI (selenium) for the features and stories in sprint to ensure CI-CD devops model approach.</li>
-                    <li class="list-group-item">+ Maintaining clean BVT and sanity API automation reports by regularly
-                        updating code against test case failures to ensure agile approach.</li>
-                    <li class="list-group-item">+ Single handedly responsible for classic product version release
-                        ensuring customer reported defect fixes and thorough regression testing in order to assure
-                        quality.</li>
-                    <li class="list-group-item">+ Managing UI automation team by Project planning through JIRA, creating
-                        stories and test cases related to sanity. Also involved in code validation from functional point
-                        of view.</li>
-                    <li class="list-group-item">+ Involved in regular interactions with product management and
-                        stakeholders.</li>
-                    <li class="list-group-item">+ Responsible for performance testing and preparing comparison insight
-                        reports.</li>
-                    <li class="list-group-item">+ Involved in preparing Test case Documentation and reports.</li>
-                </ul>
-            </div>
-            <div class="col-lg-6 p-4 shadow-lg bg-white rounded">
-                <img src="images/infosyslogo.png" />
-            </div>
-            <div class="col-lg-6 p-4 shadow-lg bg-white rounded">
-                <h1 class="display-4 text-center">Systems Engineer</h1>
-                <h1 class="lead text-center">Jan 2017 - May 2019</h1>
-                <ul class="list-group list-group-flush text-left p-1">
-                    <li class="list-group-item">+ Reviewed Business Requirements and accordingly Prepared Test Plans and
-                        Scripts.</li>
-                    <li class="list-group-item">+ Identified and reported defects through Smoke Testing, Continuous
-                        Regression testing and Performance testing.</li>
-                    <li class="list-group-item">+ Identified and reported defects through Smoke Testing, Continuous
-                        Regression testing and Performance testing.</li>
-                    <li class="list-group-item">+ Developed Data Driven Automation framework using Page Object Design
-                        pattern.</li>
-                    <li class="list-group-item">+ Identified Automation Scenarios from the set of Test cases and
-                        developed Web automation scripts using Selenium WebDriver and TestNG.</li>
-                    <li class="list-group-item">+ Developed a robust framework by integrating TestNG with Maven and
-                        implemented Listeners interface, Page Object pattern, Log4j and Excel Data Driven testing.</li>
-                </ul>
+    <div id="letsConnectDiv">
+        <div class="container border shadow-lg rounded mt-5" id="letsConnectContainer">
+            <div class="row">
+                <div class="col-lg-6" id="introcontainer">
+                    <h1 class="display-4">Amit Kumar Das</h1>
+                    <p>Technology Consultant @ Microsoft</p>
+                    <p class="lead">Questions or Comments?</p>
+                    <p>Ping me or ask me a question using the form.</p>
+                </div>
+                <div class="col-lg-6 p-0 shadow-lg bg-white rounded text-left p-4" id="imagecontainer">
+                    <div class="row p-3">
+                        <h1 class="display-4">Get in Touch with Me!</h1>
+                    </div>
+                    <div class="row-lg-6 justify-content-center">
+                        <form action="mail_handler.php" role="form" method="POST" id="form" name="form"
+                            class="form needs-validation">
+                            <div id="messages" class="d-none" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <div id="messages_content"></div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-12">
+                                    <input type="text" class="form-control form-control-sm" id="uname"
+                                        pattern="^([a-zA-Z]+\s)*[a-zA-Z]+$" placeholder="Tell me your Name!"
+                                        name="uname" required>
+                                    <div class="valid-feedback">Roger That!</div>
+                                    <div class="invalid-feedback">Let's try again with a valid name</div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-12">
+                                    <input type="email" class="form-control form-control-sm" id="email"
+                                        pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                                        placeholder="Specify Your Email, Lets connect for lifetime!" name="email"
+                                        required>
+                                    <div class="valid-feedback">Roger That!</div>
+                                    <div class="invalid-feedback">I really want to reply you back but this is an invalid
+                                        email</div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-12">
+                                    <textarea class="form-control form-control-sm" id="message" required rows="3"
+                                        maxlength="1000" placeholder="What's that you want to tell me!"
+                                        name="message"></textarea>
+                                    <small id="passwordHelpBlock" class="form-text text-muted">
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="form-group text-center">
+                                <input class="btn btn-lg p-3 btn-warning font-weight-bold border-dark shadow-lg rounded"
+                                    type="submit" name="submit" value="SHOOT !!!">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row-lg-6 justify-content-center">
+                        <p class="lead">My Place: Kolkata, West Bengal</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="container border" id="letsConnect"></div>
+    <div id="feedDiv">
+        <div class="container shadow-lg rounded mt-5" id="feedContainer">
+            <div class="row">
+                <div class="col-lg-6 shadow-lg rounded" id="introcontainer">
+                    <h1 class="display-4">Amit Kumar Das</h1>
+                    <p>Technology Consultant @ Microsoft</p>
+                    <a href="#letsConnect" class="btn btn-dark btn-lg p-3 shadow-lg rounded" role="button">LET'S
+                        CONNECT</a>
 
-    <div class="container border shadow-lg rounded mt-5">
-        <div class="row">
-            <div class="col-lg-6" id="introcontainer">
-                <h1 class="display-4">Amit Kumar Das</h1>
-                <p>Technology Consultant @ Microsoft</p>
-                <p class="lead">Questions or Comments?</p>
-                <p>Ping me or ask me a question using the form.</p>
-            </div>
-            <div class="col-lg-6 p-0 shadow-lg bg-white rounded text-left p-4" id="imagecontainer">
-                <div class="row p-3">
-                    <h1 class="display-4">Get in Touch with Me!</h1>
+                    </a>
+
                 </div>
-                <div class="row-lg-6 justify-content-center">
-                    <form action="mail_handler.php" role="form" method="POST" id="form" name="form"
-                        class="form needs-validation">
-                        <div id="messages" class="d-none" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-                                    aria-hidden="true">&times;</span></button>
-                            <div id="messages_content"></div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-lg-12">
-                                <input type="text" class="form-control form-control-sm" id="uname"
-                                    pattern="^([a-zA-Z]+\s)*[a-zA-Z]+$" placeholder="Tell me your Name!" name="uname"
-                                    required>
-                                <div class="valid-feedback">Roger That!</div>
-                                <div class="invalid-feedback">Let's try again with a valid name</div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-lg-12">
-                                <input type="email" class="form-control form-control-sm" id="email"
-                                    pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
-                                    placeholder="Specify Your Email, Lets connect for lifetime!" name="email" required>
-                                <div class="valid-feedback">Roger That!</div>
-                                <div class="invalid-feedback">I really want to reply you back but this is an invalid
-                                    email</div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-lg-12">
-                                <textarea class="form-control form-control-sm" id="message" required rows="3"
-                                    maxlength="1000" placeholder="What's that you want to tell me!"
-                                    name="message"></textarea>
-                                <small id="passwordHelpBlock" class="form-text text-muted">
-                                </small>
-                            </div>
-                        </div>
-                        <div class="form-group text-center">
-                            <input class="btn btn-lg p-3 btn-warning font-weight-bold border-dark shadow-lg rounded"
-                                type="submit" name="submit" value="SHOOT !!!">
-                        </div>
-                    </form>
-                </div>
-                <div class="row-lg-6 justify-content-center">
-                    <p class="lead">My Place: Kolkata, West Bengal</p>
+                <div class="col-lg-6 p-4" id="imagecontainer">
+                    <h1 class="display-4 text-center">Let me introduce myself to you!</h1>
+                    <p>Firstly! Warm welcome to my place!</p>
+                    <p> I am an Engineering postgraduate, currently in Software Industry. My primary focus is bringing
+                        the
+                        best quality version of Software through means of Functional, Performance, and Automation Tests
+                        with
+                        a DevOps and Agile Mindset. I love my job to the core, finding bugs is one of my passion apart
+                        from
+                        coding. I try to keep myself updated with technology by keeping myself involved in tech
+                        communities,
+                        ed tech channels, etc. I am obsessed with learning the latest technologies. In my past time, I
+                        like
+                        to solve hackerank, work on my projects, gaming, guitaring,...</p>
+                    <p>Currently, I am exploring Microsoft...</p>
+                    <p>I specialize in Creating Test Bots, Containerization, Orchestration, Framework development, Test
+                        Architecting, Service virtualization, Cloud computing, etc.
+                    </p>
+                    <p>All over, I am an experienced Software Development Engineer in Test (SDET) professional with a
+                        demonstrated history of Testing Web and Android applications.
+                    </p>
+                    <p class="lead shadow-lg rounded p-2">"If I have to do a task more than twice I automate and If I
+                        have
+                        to
+                        explain a task
+                        more than
+                        twice I document"</p>
+
                 </div>
             </div>
-            <a type="button" href="#index" role="button" class="btn btn-light btn-lg btn-block font-weight-bold">GO
-                TO
-                TOP</a>
+        </div>
+
+        <div class="container text-dark border shadow-lg bg-white rounded" id="get_to_know_ctn">
+            <div class="row">
+                <div class="col-lg-6 p-4" id="highlightscontainer">
+                    <h1 class="display-4 text-center">Some Highlights!</h1>
+                    <ul class="list-group list-group-flush text-left p-1">
+                        <li class="list-group-item">+ Experience in DevOps CI+CD and Agile Culture.</li>
+                        <li class="list-group-item">+ Strong Experience in Java and Test Automation using Selenium
+                            WebDriver
+                            and REST API automation.</li>
+                        <li class="list-group-item">+ Strong knowledge in containerization with Docker and orchestration
+                            using
+                            Kubernetes.</li>
+                        <li class="list-group-item">+ Strong Knowledge of Software Development Life Cycle (SDLC),
+                            Software
+                            Testing life cycle (STLC), Agile Life Cycle with Jira, Testing Terminologies, Verification,
+                            Validation, Levels of Testing, Testing Techniques, and Bug life cycle. </li>
+                        <li class="list-group-item">+ Strong knowledge in building Test automation frameworks for
+                            functional
+                            as well as non-functional testing.</li>
+                        <li class="list-group-item">+ Experience in creating APIs with spring-boot to handle end-to-end
+                            automation scenarios.</li>
+                        <li class="list-group-item">+ Strong knowledge of Microservices, Containerization, and Cloud
+                            computing.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 p-4 shadow-lg bg-white rounded">
+                    <h1 class="display-4 text-center">My Tech Stack!</h1>
+                    <div class="row text-center">
+                        <p>Java | Selenium | Rest API Automation | Postman | Kubernetes | Docker | Maven | Testng |
+                            Log4j |
+                            Rest
+                            assured io | Cucumber | Karate | Oracle | MySQL | PostgreSQL | Unix | Shell scripting |
+                            Gatling
+                            |
+                            Git | HTML | CSS | Javascript | Jenkins | Jira | Azure Devops | Springboot | Specmatic (Mock
+                            Api) |
+                            Python | Apache Airflow | Influx | Grafana
+                        </p>
+                    </div>
+                    <div class="row">
+                        <img src="images/techstack.png" />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
 
 
 
@@ -327,9 +460,9 @@
                 style="font-size:45px;color:rgb(0, 135, 245)"></i></a>
         <a href="https://github.com/amitkiit1994/" target="_blank"><i class="fa fa-github ml-3 mr-0 p-1"
                 style="font-size:48px;color:black" width="40" height="40"></i></a>
+        <a href="images/Amit Kumar Das_7July.pdf" target="_blank"><i class="fa fa-address-card ml-3 mr-0 p-1"
+                style="font-size:38px;color:black" width="40" height="40"></i></a>
     </div>
-
-
 </body>
 <script src="whatsapp.js">
 </script>
