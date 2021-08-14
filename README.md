@@ -16,7 +16,7 @@ It's plain static website with a little bit of following:
 5. PHP - for server side mail function, find this in mail_handler.php
 
 # How to host your website in Github ?
-https://pages.github.com/
+https://pages.github.com/ <br>
 Note: GitHub Pages is a static site hosting service and doesn’t support server-side code such as, PHP, Ruby, or Python.
 
 # How to host it in a domain ?
