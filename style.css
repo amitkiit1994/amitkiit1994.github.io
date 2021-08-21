@@ -7,6 +7,10 @@
   padding-bottom: 10px;
 }
 
+#navContainer {
+  opacity: 80%;
+}
+
 .navbar-nav > li {
   padding-left: 15px;
   padding-right: 15px;
@@ -48,6 +52,7 @@ img {
   padding-right: 5%;
   font-size: 20px;
   text-align: center;
+  opacity: 80%;
 }
 
 body {
