@@ -59,3 +59,9 @@ body {
   padding-bottom: 70px;
   background-color: lightyellow;
 }
+
+#cardrecomend {
+  background-image: url("images/cardbg.png");
+  background-size: cover;
+  background-position: center;
+}
