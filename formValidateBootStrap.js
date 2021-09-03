@@ -60,16 +60,20 @@ var portfolioContainer = document.getElementById("portfolioDiv");
 var letsConnectContainer = document.getElementById("letsConnectDiv");
 var homeContainer = document.getElementById("homeDiv");
 var feedContainer = document.getElementById("feedDiv");
+var blogContainer = document.getElementById("blogDiv");
 var homeNavElement = document.getElementById("home_nav");
 var portfolioNavElement = document.getElementById("portfolio_nav");
 var connectNavElement = document.getElementById("connect_nav");
 var feedNavElement = document.getElementById("feed_nav");
+var blogNavElement = document.getElementById("blog_nav");
 
 function showHomeContainer() {
   portfolioContainer.style.display = "none";
   letsConnectContainer.style.display = "none";
   homeContainer.style.display = "";
   feedContainer.style.display = "none";
+  blogContainer.style.display = "none";
+  blogNavElement.classList.remove("active");
   homeNavElement.classList.add("active");
   portfolioNavElement.classList.remove("active");
   connectNavElement.classList.remove("active");
@@ -82,6 +86,8 @@ function showPortFolioContainer() {
   letsConnectContainer.style.display = "none";
   homeContainer.style.display = "none";
   feedContainer.style.display = "none";
+  blogContainer.style.display = "none";
+  blogNavElement.classList.remove("active");
   homeNavElement.classList.remove("active");
   portfolioNavElement.classList.add("active");
   connectNavElement.classList.remove("active");
@@ -93,6 +99,8 @@ function showConnectContainer() {
   portfolioContainer.style.display = "none";
   letsConnectContainer.style.display = "";
   homeContainer.style.display = "none";
+  blogContainer.style.display = "none";
+  blogNavElement.classList.remove("active");
   homeNavElement.classList.remove("active");
   portfolioNavElement.classList.remove("active");
   connectNavElement.classList.add("active");
@@ -105,11 +113,26 @@ function showFeedContainer() {
   portfolioContainer.style.display = "none";
   letsConnectContainer.style.display = "none";
   homeContainer.style.display = "none";
+  blogContainer.style.display = "none";
+  blogNavElement.classList.remove("active");
   homeNavElement.classList.remove("active");
   portfolioNavElement.classList.remove("active");
   connectNavElement.classList.remove("active");
   feedNavElement.classList.add("active");
   feedContainer.style.display = "";
+  window.scrollTo(0, 0);
+}
+function showBlogContainer() {
+  portfolioContainer.style.display = "none";
+  letsConnectContainer.style.display = "none";
+  homeContainer.style.display = "none";
+  feedContainer.style.display = "none";
+  homeNavElement.classList.remove("active");
+  portfolioNavElement.classList.remove("active");
+  connectNavElement.classList.remove("active");
+  feedNavElement.classList.remove("active");
+  blogNavElement.classList.add("active");
+  blogContainer.style.display = "";
   window.scrollTo(0, 0);
 }
 
